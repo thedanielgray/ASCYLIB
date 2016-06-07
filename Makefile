@@ -190,6 +190,7 @@ lbst_optik2:
 st: lfst_treiber lbst_lock lbst_optik lbst_optik1 lbst_optik2
 
 stppopp: lfst_treiber lbst_lock lbst_lock_tas lbst_optik
+stcpp: lfst_treiber lbst_lock
 
 lfll_harris:
 	$(MAKE) "STM=LOCKFREE" src/linkedlist-harris

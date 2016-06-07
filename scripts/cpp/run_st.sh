@@ -2,14 +2,14 @@
 
 ds=st;
 
-. ./scripts/ppopp/run.config
+. ./scripts/cpp/run.config
 
 do_thr=1;
-do_ldi=1;
+do_ldi=0;
 
 skip=$#;
 
-algos=( ./${ub}/lf-st_treiber ${ub}/lb-st_lock ${ub}/lb-st_optik );
+algos=( ./${ub}/lf-st_treiber ${ub}/lb-st_lock );
 
 param_i=65534;
 params_p=( 40 50 60 );
@@ -53,7 +53,7 @@ then
 
     if [ $do_compile -eq 1 ];
     then
-	ctarget=${ds}ppopp;
+	ctarget=${ds}cpp;
 	cflags="SET_CPU=$set_cpu";
 	echo "----> Compiling" $ctarget " with flags:" $cflags;
 	make $ctarget $cflags >> /dev/null;
@@ -94,7 +94,7 @@ then
 
     if [ $do_compile -eq 1 ];
     then
-	ctarget=${ds}ppopp;
+	ctarget=${ds}cpp;
 	cflags="SET_CPU=$set_cpu LATENCY=6";
 	echo "----> Compiling" $ctarget " with flags:" $cflags;
 	make $ctarget $cflags >> /dev/null;
