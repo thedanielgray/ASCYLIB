@@ -131,11 +131,13 @@ lbsl_optik2:
 sl:	seqsl lfsl_fraser lfsl_herlihy_lf lbsl_pugh lbsl_herlihy_lb lbsl_optik lbsl_optik1 lbsl_optik2
 
 slppopp: lfsl_fraser lbsl_herlihy_lb lbsl_optik lbsl_optik1 lbsl_optik2
+slcpp: lfsl_fraser lbsl_herlihy_lb lfsl_herlihy_lf lbsl_optik1
 
 
 qu: lbqu_ms lfqu_ms lbqu_optik0 lbqu_optik1 lbqu_optik2 lbqu_optik2a lbqu_optik3 lbqu_optik4 lbqu_optik5
 
 quppopp: lbqu_ms lfqu_ms lbqu_optik0 lbqu_optik1 lbqu_optik2 lbqu_optik3 
+qucpp: lbqu_ms lfqu_ms lbqu_ms_hybrid
 
 lbqu_ms:
 	$(MAKE) "LOCK=MCS" src/queue-ms_lb
@@ -210,6 +212,7 @@ lbll: seqll llcopy lbll_coupling lbll_gl lbll_pugh lbll_lazy lbll_lazy_sp lbll_l
 ll: seqll lfll llcopy lbll_coupling lbll_gl lbll_pugh lbll_lazy lbll_lazy_no_ro lbll_optik lbll_optik_no_ro llcopy_no_ro lbll_pugh_no_ro
 
 llppopp: lfll_harris_opt lbll_lazy lbll_lazy_cache lbll_gl lbll_optik_gl lbll_optik lbll_optik_cache
+llcpp: lbll_lazy lbll_coupling lfll_harris_opt lbll_optik_gl lbll_optik lbll_pugh
 
 optik: lbll_optik lbht_optik0 lbht_optik0_gl lbht_optik1 lbht_optik1_gl
 
@@ -336,6 +339,7 @@ htrcugc:
 ht:	seqht lfht lbht htjava htjava_optik tbb htcopy htrcu lbht_coupling lbht_lazy lbht_pugh lbht_coupling_gl lbht_lazy_gl lbht_pugh_gl lbht_lazy_gl_no_ro lbht_pugh_gl_no_ro htcopy_no_ro htjava_no_ro
 
 htppopp: lbht_lazy_gl htjava htjava_optik lbht_optik0 lbht_optik1 lbht_map
+htcpp: lfht htcopygl htjava lbht_optik0 lbht_optik1 lbht_pugh
 
 seqbstint:
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" src/bst-seq_internal
