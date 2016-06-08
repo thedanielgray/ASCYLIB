@@ -83,7 +83,7 @@ then
 
 	echo "### params -i$initial -p$put / keep $keep of reps $repetitions of dur $duration" | tee ${uo}/$out;
 
-	./scripts/scalability_rep.sh $cores $repetitions $keep "$algos_str" -d$duration -i$initial -p$put \
+	./scripts/scalability_rep.sh "$cores" $repetitions $keep "$algos_str" -d$duration -i$initial -p$put \
 	    | tee -a ${uo}/$out;
     done;
 fi;
