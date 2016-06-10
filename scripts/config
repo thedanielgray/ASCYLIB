@@ -135,6 +135,9 @@ then
     elif [ $unm = "diassrv8" ];
     then
 	cores="2 $(seq 10 5 200)";
+    elif [ $unm = "gondolin" ];
+    then
+        cores="2 $(seq 3 1 8) 10 12"
     else
         max=$(nproc);
 	maxp4=$(($max+4));

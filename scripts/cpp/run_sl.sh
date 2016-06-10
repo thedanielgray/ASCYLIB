@@ -2,7 +2,7 @@
 
 ds=sl;
 
-. ./scripts/ppopp/run.config
+. ./scripts/cpp/run.config
 
 skip=$#;
 
@@ -39,7 +39,7 @@ fi;
 
 if [ $do_compile -eq 1 ];
 then
-    ctarget=${ds}ppopp;
+    ctarget=${ds}cpp;
     for WORKLOAD in 0 2;
     do
 	cflags="SET_CPU=$set_cpu WORKLOAD=$WORKLOAD";

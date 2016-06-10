@@ -9,7 +9,7 @@ do_ldi=0;
 
 skip=$#;
 
-algos=( ./${ub}/lf-st_treiber ${ub}/lb-st_lock );
+algos=( ${ub}/lf-st_treiber ${ub}/lb-st_lock );
 
 param_i=65534;
 params_p=( 40 50 60 );
@@ -46,7 +46,6 @@ fi;
 cores=$cores_backup;
 algos_str="${algos[@]}";
 
-
 if [ $do_thr -eq 1 ];
 then
     echo "########################################### Throughput";
@@ -76,14 +75,14 @@ then
 	put=${params_p[$i]};
 	if [ $fixed_file_dat -ne 1 ];
 	then
-	    out="$unm.${ds}.thr.p$put.dat"
+	    out="$unm.${ds}.thr.p${put}.dat"
 	else
-	    out="data.${ds}.thr.p$put.dat"
+	    out="data.${ds}.thr.p${put}.dat"
 	fi;
 
 	echo "### params -i$initial -p$put / keep $keep of reps $repetitions of dur $duration" | tee ${uo}/$out;
 
-	./scripts/scalability_rep.sh "$cores" $repetitions $keep "$algos_str" -d$duration -i$initial -p$put \
+	./scripts/scalability_rep_simple.sh "$cores" $repetitions $keep "$algos_str" -d$duration -i$initial -p$put \
 	    | tee -a ${uo}/$out;
     done;
 fi;

@@ -10,13 +10,13 @@ if [ -f "$file" ];
 then
     echo "//Using config file $file";
     . $file;
-    skip=0;
+    skip=1;
 else
 . ./scripts/cpp/run.config;
 fi;
 
 #algos=( ${ub}/lf-ll_harris_opt ${ub}/lb-ll_lazy ${ub}/lb-ll_gl ${ub}/lb-ll_optik_gl ${ub}/lb-ll_optik ${ub}/lb-ll_optik_cache ${ub}/lb-ll_lazy_cache );
-algos=( ${ub}/lb-ll_lazy ${ub}/lb-ll_copy ${ub}/lb-ll_coupling ${ub}/lf-ll_harris_opt ${ub}/lb-ll_optik_gl ${ub}/lb-ll_optik ${ub}/lb-ll_pugh );
+algos=( ${ub}/lb-ll_lazy ${ub}/lb-ll_coupling ${ub}/lf-ll_harris_opt ${ub}/lb-ll_optik_gl ${ub}/lb-ll_optik ${ub}/lb-ll_pugh );
 
 # params_i=( 128 512 2048 4096 8192 );
 # params_u=( 100 50  20   10   1 );

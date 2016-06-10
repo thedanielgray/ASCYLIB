@@ -1,0 +1,14 @@
+### params -i64 -r128 -u40 / keep median of reps 3 of dur 2000
+# Result from 3 repetitions: median
+#       gondolinlb-ll_lazy_2 gondolinlb-ll_coupling_2 gondolinlf-ll_harris_opt_2 gondolinlb-ll_optik_gl_2 gondolinlb-ll_optik_2 gondolinlb-ll_pugh_2 
+#cores  throughput   throughput   throughput   throughput   throughput   throughput   
+1       6187448      1427244      4821500      5699525      5433912      6016162      
+2       7788112      381404       7182978      6083548      7947618      8346692      
+3       8924396      520920       9403702      6480936      9755282      9824109      
+4       9412654      650643       10616996     6551325      10924726     10856924     
+5       9704494      766466       11575382     6668726      11535704     10926113     
+6       9747171      882942       11948488     6869127      11909792     11067068     
+7       9782737      981053       12304816     6822669      12044552     11141460     
+8       9637732      1047218      12460770     6843154      12012870     10997792     
+10      2991626      121910       11616986     6661256      11136184     2803886      
+12      2244750      79955        11128102     6630106      10812214     2181873      
