@@ -6,7 +6,7 @@ ds=sl;
 
 skip=$#;
 
-algos=( ${ub}/lf-sl_fraser ${ub}/lb-sl_herlihy ${ub}/lf-sl_herlihy ${ub}/lb-sl_optik1 );
+algos=( ${ub}/lf-sl_fraser ${ub}/lb-sl_herlihy ${ub}/lb-sl_optik1 );
 
 # params_i=( 128 512 2048 4096 8192 );
 # params_u=( 100 50  20   10   1 );
